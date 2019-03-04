@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FOR - Schleife</title>
+
+<script>
+function würfeln() {
+	var AnzahlKleiner5 = 0;
+	var AnzahlGrößer5 = 0
+	
+	for(var i = 0; i < 20; i += 1 ) {
+		var wert = Math.random()*10 + 0.5;
+		wert = Math.round(wert);
+		if(wert <= 5) {
+			AnzahlKleiner5 += 1;
+		}
+		else {
+			AnzahlGrößer5 ++;
+		}
+	}
+	var ausgabeText = "Anzahl Kleiner 5 = " + AnzahlKleiner5 + " <br> ";
+	ausgabeText += "Anzahl Größer 5 = " + AnzahlGrößer5;
+	document.getElementById("ausgabe").innerHTML = ausgabeText;
+}
+
+</script>
+</head>
+<body>
+<h1>FOR - Schleife</h1>
+<br>
+<input type="button" value="Jetzt würfeln" onclick="würfeln()">
+<p id="ausgabe"></p>
+</body>
+</html>

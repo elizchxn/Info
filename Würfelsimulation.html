@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Würfelsimulation</title>
+
+<script>
+function würfeln() {
+	var ausgabeText = "Ausgabe:<br>";
+	var anzahlSechser = 0;
+	var x = parseInt(document.getElementById("eingabex").value);
+	
+	for(var i = 0; i < x; i += 1 ) {
+		var wert = Math.random()*6 + 0.5;
+		wert = Math.round(wert);
+		if(wert == 6) {
+			anzahlSechser += 1;
+		var prozent = (anzahlSechser/x)*100;
+		}
+	}
+	ausgabeText += "Du hast " + anzahlSechser + " mal einen 6er gewürfelt ( " + prozent + " %) !"; 
+	document.getElementById("ausgabe").innerHTML = ausgabeText;
+}
+
+</script>
+</head>
+<body>
+<h1>Würfelsimulation</h1>
+<br>
+<input type="text" id="eingabex" style="width:40"> 
+<input type="button" value="Jetzt würfeln" onclick="würfeln()">
+<p id="ausgabe"></p>
+</body>
+</html>

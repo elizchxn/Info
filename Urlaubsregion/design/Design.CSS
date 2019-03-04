@@ -1,0 +1,19 @@
+	h1	{
+		color:	blue;
+	}
+	h2	{
+		color:	light blue;
+	}
+	p	{
+		color:	light blue;
+	}
+	.schwarzerParagraphen	{
+		color:	black;
+	}
+	table{
+		border: 1px solid #2ECCFA;
+		height: 60px;
+	}
+	td	{
+		height: 50px;
+	}

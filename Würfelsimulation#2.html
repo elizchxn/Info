@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Würfelsimulation#2</title>
+
+<script>
+function zufallsZahl () {
+	var wert = Math.random()*6 + 0.5;
+	wert = Math.round(wert);
+	return wert;
+} 
+function würfeln() {
+	var ausgabeText = "";
+	var ausgabeText2 = "";
+	
+	var wert1 = zufallsZahl ();
+	var wert2 = zufallsZahl ();
+	
+	var augenzahl = (wert + wert2)
+		if(wert==wert2) {
+			ausgabeText2 = "Du hast einen Pasch geworfen!!!";
+		}
+	
+	ausgabeText += wert + " / " + wert2; 
+	document.getElementById("ausgabe").innerHTML = ausgabeText;
+	document.getElementById("ausgabe2").innerHTML = ausgabeText2;
+}
+
+</script>
+</head>
+<body>
+<h1>Würfelsimulation#2</h1>
+<br>
+<input type="button" value="Jetzt würfeln" onclick="würfeln()">
+<p id="ausgabe"></p>
+<p id="ausgabe2"></p>
+</body>
+</html>
