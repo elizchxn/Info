@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Umrechnung Gradmaß/Bogenmaß</title>
+<style>
+	table {
+		border: 1px solid #2ECCFA;
+		height: 60px;
+	}
+	h1 {
+		color: #2ECCFA;
+	}
+	p {
+		color: #2ECCFA
+	}
+</style>
+<script>
+
+function gradInRad() {
+	var grad = document.getElementById("eingabeGrad").value;
+	grad = parseInt (grad);
+	var rad = grad*Math.PI/180;
+	var ausgabe = grad + "° sind "+ rad + " rad." ;
+	document.getElementById("ausgabe"). innerHTML = ausgabe;
+}
+function radInGrad() {
+	var rad = document.getElementById("eingabeRad").value;
+	rad = parseInt (rad);
+	var grad = rad*180/Math.PI;
+	var ausgabe = rad + " sind "+ grad + "° grad." ;
+	document.getElementById("ausgabe"). innerHTML = ausgabe;
+}
+</script>
+
+</head>
+<body>
+<h1>Umrechnung Gradmaß/Bogenmaß</h1>
+<table border="1px">
+	<tr>
+		<td>Grad</td>
+		<td>Rad</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="text" id="eingabeGrad">
+		</td>
+		<td>
+		<input type="text" id="eingabeRad">
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type="button" value="In rad" onclick="gradInRad()">
+		</td>
+		<td>
+		<input type="button" value="In grad" onclick="radInGrad()">
+		</td>
+	</tr>
+</table>
+<p id="ausgabe">Hier kommt die Ausgabe ...</p>
+</body>
+</html>
