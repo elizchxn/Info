@@ -1,0 +1,18 @@
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Fibonacci Zahlen</title>
+</head>
+<body>
+  <h1>Fibonacci Zahlen</h1>
+  <p id = "ausgabe"></p>
+<script>
+  var zahlen = [1,1];
+  for(var k = 1;k<= 10;k++){
+    var z = zahlen[k] + zahlen[k - 1];
+    zahlen[zahlen.length] = z;
+  }
+  document.getElementById("ausgabe").innerHTML=zahlen;
+</script>
+</body>
+</html>
