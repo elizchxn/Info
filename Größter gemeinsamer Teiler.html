@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>GGT</title>
+	<script>
+		function berechne() {
+			var a = document.getElementById("eingabe1").value;
+			var b = document.getElementById("eingabe2").value;
+			var teiler = ggt(a,b);
+			document.getElementById("ausgabe").innerHTML = "Der größte gemeinsame Teiler ist : " + teiler;
+		}
+		function ggt(a,b) {
+			var rest;
+			do {
+					rest = a % b;
+					a = b;
+					b = rest;
+			}
+			while (rest > 0){
+					return a;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Größter gemeinsamer Teiler</h1>
+	<br>
+	<input type = "number" id = "eingabe1"/>
+	<input type = "number" id = "eingabe2"/>
+	<br>
+	<input type = "button" value = "Berechne ggT" onclick = "berechne()"/>
+	<br>
+	<p id ="ausgabe"></p>
+</body>
+</html>

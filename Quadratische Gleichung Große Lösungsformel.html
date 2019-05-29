@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="utf-8">
+
+<script>
+function berechnen(){
+	var a = parseInt(document.getElementById("a").value);
+	var b = parseInt(document.getElementById("b").value);
+	var c = parseInt(document.getElementById("c").value);
+	
+	var diskriminante = Math.pow(b,2)-4*a*c;
+
+
+	if(diskriminante > 0) {
+		var ergebnis1 = (-b + Math.sqrt(diskriminante))/(2*a)
+		var ergebnis2 = (-b - Math.sqrt(diskriminante))/(2*a)
+		document.getElementById("ausgabe"). innerHTML = "Keine Lösung in den reellen Zahlen.";
+	}
+	if(diskriminante < 0) {
+		document.getElementById("ausgabe"). innerHTML = "Die Funktion hat einen Schnittpunkt mit der Y -Achse: ";
+	}
+	if(diskriminante == 0) {
+		var ergebnis = b*(-1)/(2*a);
+		document.getElementById("ausgabe"). innerHTML = "Die Funktion hat zwei Schnittpunkte mit der X -Achse: ";
+	}
+}
+</script>
+</head>
+<body>
+
+<h1>Quadratische Gleichung Große Lösungsformel</h1>
+ x² + <input type="text" id="p" style="width:40"> 
+ x + <input type="text" id="q" style="width:40">
+<br><br>
+<input type="button" value="Berechne die Lösungen" onclick="berechnen ()">
+<br>
+<p id="ausgabe">Die Lösung ist: ...</p>
+
+</body>
+</html>
